@@ -6,7 +6,7 @@ module.exports = {
     basePath: process.env.NODE_ENV === "production" ? "/next-profile" : "",
   },
 
-  images: {
-    domains: ['1.bp.blogspot.com']
-  },
+  // images: {
+  //   domains: ['1.bp.blogspot.com']
+  // },
 };
