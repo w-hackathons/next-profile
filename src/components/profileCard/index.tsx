@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { VFC } from 'react';
 import styles from './ProfileCard.module.scss';
 
@@ -10,11 +9,9 @@ type Props = {
 const ProfileCard: VFC<Props> = (props) => {
     return (
         <div className={styles.container__about__content}>
-            <Image
+            <img
                 src="https://1.bp.blogspot.com/-lQvVaZVuCfs/XvcI4m2KdKI/AAAAAAABZts/6a_b9K3DrscSuAa_9lY6dDEb313PNnklwCNcBGAsYHQ/s400/megane_hikaru_woman.png"
                 alt="テキストテキストテキスト"
-                height="100"
-                width="100"
                 className={styles.container__about__content_img}
             />
             <div className={styles.container__about_text}>
