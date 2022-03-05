@@ -1,0 +1,79 @@
+@charset "UTF-8";
+/* 固定の値を記述するSCSSから読み込む */
+@import './variables';
+/* 共通のスタイルを記載するSCSSから読み込む */
+@import './mixins';
+
+/*-------------------------------------------
+複数使うスタイル
+-------------------------------------------*/
+.site_title {
+    line-height: 1px;
+    padding: 10px 0;
+    a {
+        display: block;
+    }
+}
+.section_title {
+    display: inline-block;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 60px;
+    border-bottom: solid 1px #383e45;
+}
+.content_title {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+/*-------------------------------------------
+body内の全体のスタイル
+-------------------------------------------*/
+.container {
+    margin-bottom: 80px;
+    img {
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+    }
+    /*-------------------------------------------
+    About
+    -------------------------------------------*/
+    &__about {
+        @include contents;
+    }
+    /*-------------------------------------------
+    images
+    -------------------------------------------*/
+    &__images {
+        @include contents;
+        ul {
+            display: flex;
+            justify-content: space-between;
+        }
+        li {
+            width: 32%;
+        }
+    }
+}
+
+/*-------------------------------------------
+モバイル版の見た目にする
+-------------------------------------------*/
+@include max_sp {
+    .container {
+        img {
+            // height: calc(100vh - 60px);
+            height: 100vh;
+        }
+        &__images {
+            ul {
+                flex-direction: column;
+            }
+            li {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
